@@ -1,31 +1,50 @@
-# Cyber-Security-CS---Hiding-message-in-an-image
+## Project Summary: Image Steganography using Python
 
-The provided code defines functions for text encryption and decryption using image steganography. It utilizes least significant bit (LSB) modification to embed the message bits within the image's color values.
+**Project Objective:** This project implements a Python program that can embed and extract secret messages within images using a simple steganographic technique called Least Significant Bit (LSB) encoding.
 
-**Function Overview:**
+**Key Features:**
 
-1. `text_to_binary`: Converts a text message into its binary representation.
+* The program can both encrypt and decrypt messages.
+* Messages are converted to binary format before embedding into the image pixels.
+* A password is used for decryption to protect the hidden message.
+* The process is user-friendly with a simple menu-driven interface.
 
-2. `binary_to_text`: Converts a binary string back into its corresponding text message.
+**Technical Details:**
 
-3. `encrypt_message`: Encrypts a message by embedding its binary representation into an image's LSBs.
+* Programming Language: Python
+* Libraries used: OpenCV, NumPy
+* Steganography Technique: LSB Encoding
 
-4. `decrypt_message`: Decrypts a message from an image by extracting the embedded binary representation and converting it back to text.
+**Project Workflow:**
 
-**Main Execution:**
+1. The user chooses to encrypt or decrypt a message.
+2. For encryption:
+    * User enters the message and password.
+    * Message is converted to binary format.
+    * Binary message is embedded into the image pixel values.
+    * Encrypted image is saved and displayed.
+3. For decryption:
+    * User enters the password.
+    * Embedded binary message is extracted from the image.
+    * Binary message is converted back to text and displayed.
 
-1. Reads an image using OpenCV's `imread` function.
+**Benefits:**
 
-2. Enters a loop to handle encryption or decryption based on user input.
+* Provides a simple and effective way to hide messages within images.
+* Offers a password protection mechanism for secure decryption.
+* Useful for educational purposes to understand steganography principles.
 
-3. For encryption:
-    - Prompts for the secret message and encryption password.
-    - Encrypts the message using `encrypt_message` and saves the encrypted image.
-    - Displays the encrypted image.
+**Limitations:**
 
-4. For decryption:
-    - Prompts for the decryption password.
-    - Decrypts the saved encrypted image using `decrypt_message` if the password matches.
-    - Displays the decrypted message.
+* The encryption method is relatively simple and can be broken with advanced techniques.
+* The maximum message length is limited by the available image size.
+* The password security relies solely on the user's choice, which can be weak.
 
-5. Exits the loop if the user chooses not to continue.
+**Future Enhancements:**
+
+* Implement more robust encryption algorithms.
+* Utilize advanced embedding techniques for better security.
+* Integrate image preprocessing steps to reduce distortion.
+* Develop a graphical user interface for a more user-friendly experience.
+
+**Overall, this project demonstrates a basic implementation of steganography using Python. It serves as a good starting point for further exploration and development of more advanced techniques.**
